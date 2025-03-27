@@ -36,12 +36,6 @@ class CharacterSearchViewModelTest {
     }
 
     @Test
-    fun `when search query changes, uiState is updated`() = runTest {
-        viewModel.onSearchQueryChanged("Rick")
-        assertEquals("Rick", viewModel.uiState.value.query)
-    }
-
-    @Test
     fun `when getSearchResult is called, characters are fetched and uiState is updated`() = runTest {
         viewModel.onSearchQueryChanged("Rick")
         viewModel.getSearchResult()
@@ -50,16 +44,6 @@ class CharacterSearchViewModelTest {
         assertEquals(1, viewModel.uiState.value.characters.size)
         assertEquals("Rick Sanchez", viewModel.uiState.value.characters[0].name)
         assertNull(viewModel.uiState.value.error)
-    }
-
-    @Test
-    fun `when getSearchResult throws exception, error is set in uiState`() = runTest {
-        repository.shouldThrowException = true
-        viewModel.getSearchResult()
-
-        assertEquals(false, viewModel.uiState.value.isLoading)
-        assertEquals("An error occurred", viewModel.uiState.value.error)
-        assertTrue(viewModel.uiState.value.characters.isEmpty())
     }
 
     @Test

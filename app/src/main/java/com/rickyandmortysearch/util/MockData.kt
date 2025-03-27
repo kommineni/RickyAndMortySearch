@@ -4,6 +4,7 @@ import com.rickyandmortysearch.data.model.Location
 import com.rickyandmortysearch.data.model.Origin
 import com.rickyandmortysearch.data.model.Character
 
+
 object MockData {
      val sampleCharacters = listOf(
         Character(
