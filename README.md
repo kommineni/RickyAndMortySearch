@@ -1,22 +1,55 @@
-This project will allow user to search for characters from the Rick and Morty API. The user should be able to enter text into the search bar and see a list of characters whose names match the search string.
+# **Rick and Morty Character Search App**
 
-Screens
+  This project allows users to search for characters from the Rick and Morty API. Users can enter text into a search bar to view a list of characters whose names match the search string. The app features a grid view for character display and a detailed screen for individual character information.
 
-List of Character displayed in the gridview with Search Bar
-Details screen which give more detials perticulare character.
-Tech Stack
+**Screens**
+------------
+  **Character List Screen:**
+  - Displays characters in a grid view with 2 columns.
+  - Includes a search bar at the top for filtering characters by name.
+  - By default, the app loads characters with the name "Smith" on launch.
+  - The search bar updates results dynamically on each keystroke, with no input limit.
+  - A clear button (cross icon) is available to reset the search text.
 
-Jectpack Compose for UI
-Hilt for dependecy injection
-Retrofit for Webservice integration.
-UDF patter(Uni directonal flow) use Statemangement for data operations
-Add Unit tests
-Functaionality
+  **Character Details Screen:****
+  - Displays detailed information about a selected character, including:
+  - Image
+  - Name
+  - Type
+  - Origin
+  - Creation date
 
-List Screen. i. When user launch the app by default load the items with name "Smith" search. And it will display as Gridview with 2 columns. And top the application it will have the Search Bar. ii. Search bar will search the item on each keystroke there is no limit on it. To clear the search text there is small tailegin icon with cross symbol. iii. Data will refresh the ui as per search string
+**Tech Stack**
+  
+  Jetpack Compose: For building modern, declarative UI components.
+  Hilt: For dependency injection.
+  Retrofit: For seamless web service integration.
+  UDF Pattern (Unidirectional Data Flow): For state management and predictable data operations.
+  Unit Testing: To ensure functionality and reliability.
 
-Detials Screen: It will display the data about the selected item like Image,namen type, Origin and crate date etc..
+**Functionality**
+**List Screen**
+  Displays characters in a grid layout with 2 columns.
+  The search bar dynamically filters characters based on user input, updating the UI in real-time.
+  A clear button allows users to reset the search input.
 
-References:
+**Details Screen**
+  Provides detailed information about a selected character, including:
+    Profile image
+    Name
+    Type
+    Origin
+    Creation date
 
-https://rickandmortyapi.com/api/character/?name=mar
+**How It Works**
+    Default Search: On app launch, characters with the name "Smith" are displayed by default in a grid view.
+    Dynamic Search: The search bar updates results dynamically as users type. No need to press "Enter."
+    Clear Search: Users can clear the search text using the cross icon in the search bar.
+    Details View: Clicking on a character opens their detailed profile.
+
+**References**
+  Rick and Morty API Documentation
+  Example API Endpoint: https://rickandmortyapi.com/api/character/?name=mar
+
+This project demonstrates efficient use of modern Android development tools and patterns to create an interactive and user-friendly application.
+
